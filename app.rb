@@ -3,6 +3,8 @@ require 'byebug'
 
 require './guest.rb'
 
+set :public_folder, File.dirname(__FILE__) + '/public'
+
 get '/' do
   'Hello world!'
 end
@@ -14,11 +16,12 @@ end
 
 post '/party/guests' do
   Guest.load_guests
-
+  p params['guest_website']
   guest = Guest.new(
     params['guest_name'],
     params['guest_number_of_friends'],
-    params['guest_time_of_arrival']
+    params['guest_time_of_arrival'],
+    params['guest_website']
   )
 
   guest.add_to_list

@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Party!</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
 </head>
 
 <body>
@@ -12,15 +13,24 @@
 <h2>Guest List</h2>
 
 <strong>We're already <%= @guests.size %> people!</strong>
-
-<ul>
+<br>
+<table>
+  <tr>                  
+    <th>Name</th>    
+    <th>Number of Friends</th> 
+    <th>Time of Arrival</th>  
+    <th>Website</th>    
+  </tr>
   <% @guests.each do |guest| %>
-    <li>
-      <%= guest.name %>
-      (brings <%= guest.number_of_friends %> friends and arrives at <%= guest.time_of_arrival %>)
-    </li>
+    <tr> 
+      <td><%= guest.name %></td>
+      <td class="align_right"><%= guest.number_of_friends %></td>
+      <td class="align_right"><%= guest.time_of_arrival %></td>
+      <td class="align_right"> <a href="<%= guest.website %>">Link</a> </td>
+    </tr>
+
   <% end %>
-</ul>
+</table>
 
 <!-- <img src="party-hard.gif" /> -->
 
@@ -44,10 +54,15 @@
       <input type="text" name="guest_time_of_arrival" placeholder="20:00" />
     </label>
   </p>
-
+   <p>
+    <label for="homepage">Add your homepage:
+      <input type="text" name="guest_website">
+    </label>
+  </p>
   <p>
     <input type="submit" name="submit" value="Sign up!" />
   </p>
+
 </form>
 
 </body>
