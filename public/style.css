@@ -22,6 +22,11 @@ tr:hover {
   background-color: #f7bd83;
 }
 
+table.table_color tr:nth-child(odd){
+  background-color: #f2f2f2;
+}
+
 .align_right {
   text-align: right;
 }
+

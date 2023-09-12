@@ -6,7 +6,7 @@ class Guest
 
   attr_reader :name, :number_of_friends, :time_of_arrival, :website
 
-  def initialize(name, number_of_friends, time_of_arrival, website = "no website")
+  def initialize(name, number_of_friends, time_of_arrival, website = nil)
     @name = name
     @number_of_friends = number_of_friends
     @time_of_arrival = time_of_arrival
@@ -19,11 +19,7 @@ class Guest
         guest_line[0],
         guest_line[1],
         guest_line[2],
-        if guest_line[3]
-          guest_line[3]
-        else
-          "no website"
-        end
+        guest_line[3]
       )
     end
   end
