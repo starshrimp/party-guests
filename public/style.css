@@ -1,5 +1,5 @@
 body {
-  background-color: #f1f1f1;
+  /* background-color: #f1f1f1; */
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -29,4 +29,26 @@ table.table_color tr:nth-child(odd){
 .align_right {
   text-align: right;
 }
+
+header {
+  color: pink;
+}
+
+nav {
+  background-color: green;
+  float: left;
+  width: 30%;
+}
+
+main {
+  background-color: yellow;
+  float: right;
+  width: 70%;
+}
+
+footer {
+  display: block;
+  clear: both; /* or clear: left; or clear: right; */
+}
+
 
