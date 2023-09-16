@@ -2,6 +2,22 @@ body {
   /* background-color: #f1f1f1; */
   font-family: Arial, Helvetica, sans-serif;
 }
+nav {
+  background-color: green;
+  width: 100%;
+  display: block;
+
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline;
+}
 
 h1 {
   color: red;
@@ -34,14 +50,10 @@ header {
   color: pink;
 }
 
-nav {
-  background-color: green;
-  float: left;
-  width: 30%;
-}
+
 
 main {
-  background-color: yellow;
+  background-color: #f1f1f1;
   float: right;
   width: 70%;
 }
@@ -50,5 +62,26 @@ footer {
   display: block;
   clear: both; /* or clear: left; or clear: right; */
 }
+
+/* .video {
+  width: 100%;
+  height: auto;
+  margin-right: 25%;
+
+} */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio (9 / 16 * 100%) */
+  width: 100%;
+}
+
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 
 

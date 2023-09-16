@@ -14,7 +14,12 @@ get '/party' do
   erb :party
 end
 
-post '/party/guests' do
+get '/signup' do
+  @guests = Guest.load_guests
+  erb :signup
+end
+
+post '/signup/guests' do
   Guest.load_guests
   p params['guest_website']
   guest = Guest.new(

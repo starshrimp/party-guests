@@ -8,15 +8,16 @@
 
 <body>
 <header>
-  <h1>Party!</h1>
-</header>
 <nav>
   <ul>
     <li><a href="/">Home</a></li>
     <li><a href="/party">Party</a></li>
-    <li><a href="https://google.com">Google</a></li>
+    <li><a href="/signup">Sign up for the party!</a></li>
   </ul>
 </nav>
+<h1>Party!</h1>
+</header>
+
 <main>
   <h2>Guest List</h2>
 
@@ -46,47 +47,20 @@
 
       <% end %>
     </table>
-    <iframe width="420" height="315" src="https://www.youtube.com/embed/-Js49GdidVk"></iframe>
-
+    <div class="video-container">
+      <iframe class="video" src="https://www.youtube.com/embed/-Js49GdidVk" autoplay></iframe>
+    </div>
   <% else %>
     <p>No one has signed up yet :( </p> 
     <p>Be the first to sign up!</p>
-    <iframe width="420" height="315" src="https://www.youtube.com/embed/CkJ6w-V54EA"></iframe>
-
+    <div class="video-container">
+      <iframe class="video" src="https://www.youtube.com/embed/CkJ6w-V54EA" autoplay></iframe>
+    </div>
     
   <% end %>
-  <!-- <img src="party-hard.gif" /> -->
+  <img src="party-hard.gif" /> 
 
-  <h2>Sign up for the party!</h2>
 
-  <form action="/party/guests" method="POST">
-    <p>
-      <label>Name:
-        <input type="text" name="guest_name" placeholder="John Doe" />
-      </label>
-    </p>
-
-    <p>
-      <label>Number of friends:
-        <input type="text" name="guest_number_of_friends" placeholder="1, 2, 3" />
-      </label>
-    </p>
-
-    <p>
-      <label>Time of arrival:
-        <input type="text" name="guest_time_of_arrival" placeholder="20:00" />
-      </label>
-    </p>
-    <p>
-      <label for="homepage">Add your homepage:
-        <input type="url" name="guest_website">
-      </label>
-    </p>
-    <p>
-      <input type="submit" name="submit" value="Sign up!" />
-    </p>
-
-  </form>
 </main>
 <footer>
   <p>2023 Sarah Rebecca Meyer</p>
